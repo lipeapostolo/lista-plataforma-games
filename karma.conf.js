@@ -19,6 +19,9 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
+      moca: {
+        timeout : 20000 // 20 segundos
+      },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     jasmineHtmlReporter: {
@@ -39,6 +42,11 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    // para evitar mensagens DESCONECTADAS
+    browserDisconnectTimeout : 10000, // padrão 2000
+    browserDisconnectTolerance : 1, // padrão 0
+    browserNoActivityTimeout : 4*60*1000, //padrão 10000
+    captureTimeout : 4*60*1000 //padrão 60000
   });
 };
