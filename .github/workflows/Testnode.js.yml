@@ -27,5 +27,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: ng test:pord
+    - run: npm run test:pord
     - run: npm run lint
