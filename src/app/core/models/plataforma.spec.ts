@@ -1,7 +1,7 @@
 import { Game } from "./game";
 import { Plataforma } from "./plataforma";
 
-fdescribe('Plataforma', () => {
+describe('Plataforma', () => {
 
     const jsonGame = {
         "path": { "_text": "./San Francisco Rush - Extreme Racing.PBP" },
